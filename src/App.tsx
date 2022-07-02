@@ -2,11 +2,12 @@ import React, {ReactNode} from 'react';
 import './App.css';
 import {client} from "./graphql/apollo";
 import {ApolloProvider} from "@apollo/client";
+import RouteRoot from "./Routes";
 
 function App() {
   return (
     <AppRoot>
-      <div className="App"/>
+      <RouteRoot/>
     </AppRoot>
   );
 }
