@@ -1,9 +1,9 @@
 import { useQuery } from '@apollo/client';
 import { Spin } from 'antd';
-import { QueryLaunchNextDocument } from '../../graphql/generated';
+import { QueryLaunchNextDocument} from '../../graphql/generated';
 
 const LaunchNext = () => {
-  const { data, loading } = useQuery(QueryLaunchNextDocument);
+  const { data,loading} = useQuery(QueryLaunchNextDocument);
   if (loading) return <Spin size="large" />;
   return (
     <div className="m-12">
