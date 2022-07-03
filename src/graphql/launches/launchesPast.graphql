@@ -1,5 +1,5 @@
-query queryLaunches {
-    launchesPast(limit: 10) {
+query queryLaunches($limit: Int) {
+    launchesPast(limit: $limit) {
         id
         mission_name
         launch_date_local

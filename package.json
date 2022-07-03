@@ -12,6 +12,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "add": "^2.0.6",
+    "antd": "^4.21.4",
     "graphql": "^16.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -32,7 +33,15 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "ignorePatterns": [
+      "src/graphql/generated.ts"
+    ],
+    "rules": {
+      "import/order": "off",
+      "react/jsx-curly-brace-presence": "off",
+      "react/jsx-boolean-value": "off"
+    }
   },
   "browserslist": {
     "production": [
@@ -51,6 +60,25 @@
     "@graphql-codegen/typed-document-node": "^2.2.13",
     "@graphql-codegen/typescript": "^2.5.1",
     "@graphql-codegen/typescript-operations": "^2.4.2",
-    "@graphql-typed-document-node/core": "^3.1.1"
+    "@graphql-typed-document-node/core": "^3.1.1",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.0.0",
+    "tailwindcss": "^3.1.4"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,css,md,graphql}": "prettier --write"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "jsxBracketSameLine": true,
+    "trailingComma": "es5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
