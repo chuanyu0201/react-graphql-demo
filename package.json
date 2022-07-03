@@ -27,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "codegen": "graphql-codegen -c codegen.yml"
+    "codegen": "graphql-codegen -c codegen.yml",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
